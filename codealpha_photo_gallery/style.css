@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#total {
+  height: 100vh;
+  width: 100%;
+  background: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#parent {
+  height: 500px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.child {
+  width: 299px;
+  height: 250px;
+  object-fit: cover;
+}
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: none; /* ilk öncə gizlədilir */
+  z-index: 20;
+}
+#prevBtn {
+  left: 20px;
+}
+#nextBtn {
+  right: 20px;
+}
+
+.child.enlarged {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 500px;
+  z-index: 10;
+  transition: 0.3s;
+}
